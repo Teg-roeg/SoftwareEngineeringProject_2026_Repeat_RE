@@ -102,6 +102,35 @@ namespace GymSystem
             Database.ExecuteNonQuery(sqlQuery);
         }
 
+        public static DataSet FindMembers(string name)
+        {
+            string sqlQuery = "SELECT MemberID, FirstName, LastName, Email, Phone, Status " +
+                              "FROM Members " +
+                              "WHERE FirstName LIKE '%" + name + "%' " +
+                              "OR LastName LIKE '%" + name + "%' " +
+                              "ORDER BY LastName, FirstName";
 
+            return Database.ExecuteMultiRowQuery(sqlQuery);
+        }
+
+        public static int GetNextMemberID()
+        {
+            string sqlQuery = "SELECT MAX(MemberID) FROM Members";
+
+            OracleDataReader dr = Database.ExecuteSingleRowQuery(sqlQuery);
+
+            int nextId;
+
+            dr.Read();
+
+            if (dr.IsDBNull(0))
+                nextId = 1;
+            else
+                nextId = dr.GetInt32(0) + 1;
+
+            dr.Close();
+
+            return nextId;
+        }
     }
 }
