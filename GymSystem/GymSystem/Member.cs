@@ -33,17 +33,75 @@ namespace GymSystem
 
         public override string ToString()
         {
-            return "Member ID: " + MemberID + "\tName: " + FirstName + " " + LastName + "\tEmail: " + Email +
-                "\tPhone: " + Phone + "\tStatus: " + Status;
+            return "Member ID: " + MemberID + "\tName: " + FirstName + " " + LastName + "\tEmail: " + Email + "\tPhone: " + Phone + "\tStatus: " + Status;
         }
         public static DataSet GetAllMembers()
         {
-            //Define the SQL query to be executed
             string sqlQuery = "SELECT MemberID, FirstName, LastName, Email, Phone, Status " +
-                "FROM Members ORDER BY MemberID";
+                              "FROM Members ORDER BY MemberID";
 
-            //Execute the SQL query
             return Database.ExecuteMultiRowQuery(sqlQuery);
         }
+
+        public static DataSet GetActiveMembers()
+        {
+            string sqlQuery = "SELECT MemberID, FirstName, LastName, Email, Phone " +
+                              "FROM Members WHERE Status = 'ACTIVE' " +
+                              "ORDER BY LastName, FirstName";
+
+            return Database.ExecuteMultiRowQuery(sqlQuery);
+        }
+
+        public static Member GetMember(int id)
+        {
+            string sqlQuery = "SELECT * FROM Members WHERE MemberID = " + id;
+
+            OracleDataReader dr = Database.ExecuteSingleRowQuery(sqlQuery);
+
+            dr.Read();
+
+            string firstName = dr.GetString(1);
+            string lastName = dr.GetString(2);
+            string email = dr.GetString(3);
+            string phone = dr.GetString(4);
+            string status = dr.GetString(5);
+
+            dr.Close();
+
+            return new Member(id, firstName, lastName, email, phone, status);
+        }
+
+        public void AddMember()
+        {
+            Debug.WriteLine(this);
+
+            string sqlQuery = "INSERT INTO Members VALUES (" + MemberID + ",'" + FirstName + "','" + LastName + "','" + Email + "','" + Phone + "','" + Status + "')";
+
+            Database.ExecuteNonQuery(sqlQuery);
+        }
+
+        public void UpdateMember()
+        {
+            string sqlQuery = "UPDATE Members SET " +
+                              "MemberID = " + MemberID + "," +
+                              "FirstName = '" + FirstName + "'," +
+                              "LastName = '" + LastName + "'," +
+                              "Email = '" + Email + "'," +
+                              "Phone = '" + Phone + "'," +
+                              "Status = '" + Status + "' " +
+                              "WHERE MemberID = " + MemberID;
+
+            Database.ExecuteNonQuery(sqlQuery);
+        }
+
+        public void WithdrawMember()
+        {
+            string sqlQuery = "UPDATE Members SET Status = 'WITHDRAWN' " +
+                              "WHERE MemberID = " + MemberID;
+
+            Database.ExecuteNonQuery(sqlQuery);
+        }
+
+
     }
 }
