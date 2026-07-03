@@ -5,7 +5,7 @@ namespace ProductApp
 {
     class Database
     {
-        public const string connectionString = "Data Source = studentoracle:1521/orcl; User Id = t00262291; Password = gyqc4K*9prh;";
+        public const string connectionString = "Data Source = studentoracle:1521/orcl; User Id = t00262291; Password = gyqc4Dk*9prh;";
 
         public static OracleConnection OpenConnection()
         {
@@ -20,7 +20,6 @@ namespace ProductApp
         {
     
             OracleConnection conn = OpenConnection(); //Open a connection to an Oracle database
-
 
             OracleCommand cmd = new OracleCommand(query, conn); //Formulate the DB request
 
