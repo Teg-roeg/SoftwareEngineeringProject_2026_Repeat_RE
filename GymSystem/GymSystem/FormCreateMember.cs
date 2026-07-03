@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GymSystem
 {
-    public partial class FormInstructors : Form
+    public partial class FormCreateMember : Form
     {
-        public FormInstructors()
+        public FormCreateMember()
         {
             InitializeComponent();
         }

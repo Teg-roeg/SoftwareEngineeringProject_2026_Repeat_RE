@@ -1,6 +1,6 @@
 ﻿namespace GymSystem
 {
-    partial class FormMembers
+    partial class FormYearlyClassTypeAnalysis
     {
         /// <summary>
         /// Required designer variable.
@@ -28,17 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // FormMembers
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1359, 759);
-            this.Name = "FormMembers";
-            this.Text = "FormMembers";
-            this.ResumeLayout(false);
-
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Text = "FormYearlyClassTypeAnalysis";
         }
 
         #endregion
