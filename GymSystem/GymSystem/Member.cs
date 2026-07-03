@@ -1,9 +1,7 @@
-﻿using Oracle.ManagedDataAccess.Client;
-using ProductApp;
-using System;
+﻿using System;
 using System.Data;
 using System.Diagnostics;
-using System.Xml.Linq;
+using Oracle.ManagedDataAccess.Client;
 
 namespace GymSystem
 {
