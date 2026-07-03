@@ -28,6 +28,18 @@ namespace GymSystem
             Speciality = speciality;
             Status = status;
         }
+        public override string ToString()
+        {
+            return "Instructor ID: " + InstructorID + "\tName: " + FirstName + " " + LastName + "\tEmail: " + Email + "\tPhone: " + Phone + "\tSpeciality: " + Speciality + "\tStatus: " + Status;
+        }
+
+        public static DataSet GetAllInstructors()
+        {
+            string sqlQuery = "SELECT InstructorID, FirstName, LastName, Email, Phone, Speciality, Status " +
+                              "FROM Instructors ORDER BY InstructorID";
+
+            return Database.ExecuteMultiRowQuery(sqlQuery);
+        }
 
 
     }
