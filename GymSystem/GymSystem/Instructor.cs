@@ -41,6 +41,35 @@ namespace GymSystem
             return Database.ExecuteMultiRowQuery(sqlQuery);
         }
 
+        public static DataSet GetActiveInstructors()
+        {
+            string sqlQuery = "SELECT InstructorID, FirstName, LastName, Speciality " +
+                              "FROM Instructors WHERE Status = 'ACTIVE' " +
+                              "ORDER BY LastName, FirstName";
+
+            return Database.ExecuteMultiRowQuery(sqlQuery);
+        }
+
+        public static Instructor GetInstructor(int id)
+        {
+            string sqlQuery = "SELECT * FROM Instructors WHERE InstructorID = " + id;
+
+            OracleDataReader dr = Database.ExecuteSingleRowQuery(sqlQuery);
+
+            dr.Read();
+
+            string firstName = dr.GetString(1);
+            string lastName = dr.GetString(2);
+            string email = dr.GetString(3);
+            string phone = dr.GetString(4);
+            string speciality = dr.GetString(5);
+            string status = dr.GetString(6);
+
+            dr.Close();
+
+            return new Instructor(id, firstName, lastName, email, phone, speciality, status);
+        }
+
 
     }
 }
