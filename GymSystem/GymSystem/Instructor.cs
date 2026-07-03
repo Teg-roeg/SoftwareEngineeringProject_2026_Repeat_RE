@@ -70,6 +70,43 @@ namespace GymSystem
             return new Instructor(id, firstName, lastName, email, phone, speciality, status);
         }
 
+        public void DeRegisterInstructor()
+        {
+            string sqlQuery = "UPDATE Instructors SET Status = 'DEREGISTERED' " +
+                              "WHERE InstructorID = " + InstructorID;
 
+            Database.ExecuteNonQuery(sqlQuery);
+        }
+
+        public static DataSet FindInstructors(string name)
+        {
+            string sqlQuery = "SELECT InstructorID, FirstName, LastName, Email, Phone, Speciality, Status " +
+                              "FROM Instructors " +
+                              "WHERE FirstName LIKE '%" + name + "%' " +
+                              "OR LastName LIKE '%" + name + "%' " +
+                              "ORDER BY LastName, FirstName";
+
+            return Database.ExecuteMultiRowQuery(sqlQuery);
+        }
+
+        public static int GetNextInstructorID()
+        {
+            string sqlQuery = "SELECT MAX(InstructorID) FROM Instructors";
+
+            OracleDataReader dr = Database.ExecuteSingleRowQuery(sqlQuery);
+
+            int nextId;
+
+            dr.Read();
+
+            if (dr.IsDBNull(0))
+                nextId = 1;
+            else
+                nextId = dr.GetInt32(0) + 1;
+
+            dr.Close();
+
+            return nextId;
+        }
     }
 }
