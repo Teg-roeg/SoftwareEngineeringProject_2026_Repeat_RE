@@ -20,9 +20,7 @@ namespace GymSystem
 
         public GymClass() : this(0, "", "", 0, DateTime.Today, "", 0, 0, 0, "") { }
 
-        public GymClass(int classID, string className, string typeCode, int instructorID,
-                        DateTime classDate, string classTime, decimal price,
-                        int roomID, int capacity, string status)
+        public GymClass(int classID, string className, string typeCode, int instructorID, DateTime classDate, string classTime, decimal price, int roomID, int capacity, string status)
         {
             ClassID = classID;
             ClassName = className;
@@ -50,5 +48,149 @@ namespace GymSystem
                    "\tStatus: " + Status;
         }
 
+        public static DataSet GetAllClasses()
+        {
+            string sqlQuery = "SELECT ClassID, ClassName, TypeCode, InstructorID, ClassDate, ClassTime, Price, RoomID, Capacity, Status " +
+                              "FROM Classes ORDER BY ClassID";
+
+            return Database.ExecuteMultiRowQuery(sqlQuery);
+        }
+
+        public static DataSet GetScheduledClasses()
+        {
+            string sqlQuery = "SELECT ClassID, ClassName, TypeCode, InstructorID, ClassDate, ClassTime, Price, RoomID, Capacity " +
+                              "FROM Classes WHERE Status = 'SCHEDULED' " +
+                              "ORDER BY ClassDate, ClassTime";
+
+            return Database.ExecuteMultiRowQuery(sqlQuery);
+        }
+
+        public static GymClass GetClass(int id)
+        {
+            string sqlQuery = "SELECT * FROM Classes WHERE ClassID = " + id;
+
+            OracleDataReader dr = Database.ExecuteSingleRowQuery(sqlQuery);
+
+            dr.Read();
+
+            string className = dr.GetString(1);
+            string typeCode = dr.GetString(2).Trim();
+            int instructorID = dr.GetInt32(3);
+            DateTime classDate = dr.GetDateTime(4);
+            string classTime = dr.GetString(5);
+            decimal price = dr.GetDecimal(6);
+            int roomID = dr.GetInt32(7);
+            int capacity = dr.GetInt32(8);
+            string status = dr.GetString(9);
+
+            dr.Close();
+
+            return new GymClass(id, className, typeCode, instructorID, classDate, classTime, price, roomID, capacity, status);
+        }
+
+        public void AddClass()
+        {
+            Debug.WriteLine(this);
+
+            if (InstructorHasClash())
+            {
+                throw new InvalidOperationException("This instructor is already assigned to another class at this date and time.");
+            }
+
+            string sqlQuery = "INSERT INTO Classes VALUES (" +
+                              ClassID + ",'" +
+                              ClassName + "','" +
+                              TypeCode + "'," +
+                              InstructorID + "," +
+                              "TO_DATE('" + ClassDate.ToString("yyyy-MM-dd") + "', 'YYYY-MM-DD'),'" +
+                              ClassTime + "'," +
+                              Price + "," +
+                              RoomID + "," +
+                              Capacity + ",'" +
+                              Status + "')";
+
+            Database.ExecuteNonQuery(sqlQuery);
+        }
+
+        public void UpdateClass()
+        {
+            if (InstructorHasClash())
+            {
+                throw new InvalidOperationException("This instructor is already assigned to another class at this date and time.");
+            }
+
+            string sqlQuery = "UPDATE Classes SET " +
+                              "ClassID = " + ClassID + "," +
+                              "ClassName = '" + ClassName + "'," +
+                              "TypeCode = '" + TypeCode + "'," +
+                              "InstructorID = " + InstructorID + "," +
+                              "ClassDate = TO_DATE('" + ClassDate.ToString("yyyy-MM-dd") + "', 'YYYY-MM-DD')," +
+                              "ClassTime = '" + ClassTime + "'," +
+                              "Price = " + Price + "," +
+                              "RoomID = " + RoomID + "," +
+                              "Capacity = " + Capacity + "," +
+                              "Status = '" + Status + "' " +
+                              "WHERE ClassID = " + ClassID;
+
+            Database.ExecuteNonQuery(sqlQuery);
+        }
+
+        public bool InstructorHasClash()
+        {
+            string sqlQuery = "SELECT COUNT(*) FROM Classes " +
+                              "WHERE InstructorID = " + InstructorID + " " +
+                              "AND ClassDate = TO_DATE('" + ClassDate.ToString("yyyy-MM-dd") + "', 'YYYY-MM-DD') " +
+                              "AND ClassTime = '" + ClassTime + "' " +
+                              "AND Status = 'SCHEDULED' " +
+                              "AND ClassID <> " + ClassID;
+
+            OracleDataReader dr = Database.ExecuteSingleRowQuery(sqlQuery);
+
+            dr.Read();
+
+            int count = Convert.ToInt32(dr.GetValue(0));
+
+            dr.Close();
+
+            return count > 0;
+        }
+
+        public void CancelClass()
+        {
+            string sqlQuery = "UPDATE Classes SET Status = 'CANCELLED' " +
+                              "WHERE ClassID = " + ClassID;
+
+            Database.ExecuteNonQuery(sqlQuery);
+        }
+
+        public static DataSet FindClasses(string name)
+        {
+            string sqlQuery = "SELECT ClassID, ClassName, TypeCode, ClassDate, ClassTime, Price, Status " +
+                              "FROM Classes " +
+                              "WHERE ClassName LIKE '%" + name + "%' " +
+                              "ORDER BY ClassDate, ClassTime";
+
+            return Database.ExecuteMultiRowQuery(sqlQuery);
+        }
+
+        public static int GetNextClassID()
+        {
+            string sqlQuery = "SELECT MAX(ClassID) FROM Classes";
+
+            OracleDataReader dr = Database.ExecuteSingleRowQuery(sqlQuery);
+
+            int nextId;
+
+            dr.Read();
+
+            if (dr.IsDBNull(0))
+                nextId = 1;
+            else
+                nextId = dr.GetInt32(0) + 1;
+
+            dr.Close();
+
+            return nextId;
+        }
     }
 }
