@@ -1,5 +1,4 @@
-﻿using ProductApp;
-using System.Data;
+﻿using System.Data;
 
 namespace GymSystem
 {

@@ -1,20 +1,22 @@
-﻿using ProductApp;
-using System.Data;
+﻿using System.Data;
 
-public class Room
+namespace GymSystem
 {
-    public int RoomID { get; set; }
-    public string Description { get; set; }
-
-    public Room(int roomID, string description)
+    public class Room
     {
-        RoomID = roomID;
-        Description = description;
-    }
+        public int RoomID { get; set; }
+        public string Description { get; set; }
 
-    public static DataSet GetRooms()
-    {
-        string sqlQuery = "SELECT * FROM Rooms ORDER BY RoomID";
-        return Database.ExecuteMultiRowQuery(sqlQuery);
+        public Room(int roomID, string description)
+        {
+            RoomID = roomID;
+            Description = description;
+        }
+
+        public static DataSet GetRooms()
+        {
+            string sqlQuery = "SELECT * FROM Rooms ORDER BY RoomID";
+            return Database.ExecuteMultiRowQuery(sqlQuery);
+        }
     }
 }
