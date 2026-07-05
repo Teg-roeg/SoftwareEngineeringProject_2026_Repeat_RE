@@ -92,7 +92,7 @@ namespace GymSystem
         {
             Debug.WriteLine(this);
 
-            if (InstructorHasClash())
+            if (InstructorHasClass())
             {
                 throw new InvalidOperationException("This instructor is already assigned to another class at this date and time.");
             }
@@ -114,7 +114,7 @@ namespace GymSystem
 
         public void UpdateClass()
         {
-            if (InstructorHasClash())
+            if (InstructorHasClass())
             {
                 throw new InvalidOperationException("This instructor is already assigned to another class at this date and time.");
             }
@@ -135,7 +135,7 @@ namespace GymSystem
             Database.ExecuteNonQuery(sqlQuery);
         }
 
-        public bool InstructorHasClash()
+        public bool InstructorHasClass()
         {
             string sqlQuery = "SELECT COUNT(*) FROM Classes " +
                               "WHERE InstructorID = " + InstructorID + " " +
