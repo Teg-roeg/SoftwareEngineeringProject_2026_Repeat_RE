@@ -33,6 +33,7 @@ namespace GymSystem
         {
             string sqlQuery = "SELECT BookingID, MemberID, ClassID, BookingDate, Status " +
                               "FROM Bookings ORDER BY BookingID";
+
             return Database.ExecuteMultiRowQuery(sqlQuery);
         }
 
@@ -40,6 +41,7 @@ namespace GymSystem
         {
             string sqlQuery = "SELECT BookingID, MemberID, ClassID, BookingDate, Status " +
                               "FROM Bookings WHERE MemberID = " + memberID + " ORDER BY BookingDate";
+
             return Database.ExecuteMultiRowQuery(sqlQuery);
         }
 
@@ -64,7 +66,8 @@ namespace GymSystem
 
         public bool MemberHasTimeClass()
         {
-            string sqlQuery = "SELECT COUNT(*) FROM Bookings b " +
+            string sqlQuery = "SELECT COUNT(*) " +
+                              "FROM Bookings b " +
                               "JOIN Classes c ON b.ClassID = c.ClassID " +
                               "WHERE b.MemberID = " + MemberID + " " +
                               "AND b.Status = 'BOOKED' " +
@@ -96,7 +99,10 @@ namespace GymSystem
             drCapacity.Close();
 
 
-            string bookingCountSql = "SELECT COUNT(*) FROM Bookings " + "WHERE ClassID = " + ClassID + " " + "AND Status = 'BOOKED'";
+            string bookingCountSql = "SELECT COUNT(*) " + 
+                                     "FROM Bookings " +
+                                     "WHERE ClassID = " + ClassID + " " +
+                                     "AND Status = 'BOOKED'";
 
             OracleDataReader drCount = Database.ExecuteSingleRowQuery(bookingCountSql);
 
@@ -108,6 +114,7 @@ namespace GymSystem
 
             return bookingCount >= capacity;
         }
+
         public void CancelBooking()
         {
             string sqlQuery = "UPDATE Bookings SET Status = 'CANCELLED' " +
