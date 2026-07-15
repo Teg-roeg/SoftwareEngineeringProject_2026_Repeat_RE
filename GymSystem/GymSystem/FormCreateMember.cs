@@ -1,20 +1,28 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GymSystem
 {
     public partial class FormCreateMember : Form
     {
+        MainForm parent;
+
         public FormCreateMember()
         {
             InitializeComponent();
+        }
+
+        public FormCreateMember(MainForm Parent)
+        {
+            InitializeComponent();
+            parent = Parent;
+        }
+
+        private void MenuBackClick(object sender, EventArgs e)
+        {
+            this.Close();
+            parent.Visible = true;
         }
     }
 }

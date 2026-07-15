@@ -14,5 +14,12 @@ namespace GymSystem
         {
             Application.Exit();
         }
+
+        private void MenuCreateMember(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormCreateMember nextForm = new FormCreateMember(this);
+            nextForm.Show();
+        }
     }
 }
