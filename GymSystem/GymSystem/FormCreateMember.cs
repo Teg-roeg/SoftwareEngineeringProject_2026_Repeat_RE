@@ -24,5 +24,12 @@ namespace GymSystem
             this.Close();
             parent.Visible = true;
         }
+
+        private void FormCreateMemberLoad(object sender, EventArgs e)
+        {
+            //txtMemberID.Text = Member.GetNextMemberID().ToString("0000");
+
+            //txtFirstName.Focus();
+        }
     }
 }
