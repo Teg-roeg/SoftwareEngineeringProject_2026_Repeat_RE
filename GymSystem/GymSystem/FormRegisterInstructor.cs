@@ -84,6 +84,17 @@ namespace GymSystem
             );
 
             anInstructor.AddInstructor();
+
+            MessageBox.Show("Instructor registered successfully", "Success",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            txtInstructorID.Text = Instructor.GetNextInstructorID().ToString("0000");
+            txtFirstName.Clear();
+            txtLastName.Clear();
+            txtEmail.Clear();
+            txtPhone.Clear();
+            txtSpeciality.Clear();
+            txtFirstName.Focus();
         }
     }
 }
