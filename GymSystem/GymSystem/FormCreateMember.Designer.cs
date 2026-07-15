@@ -212,7 +212,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormCreateMember";
-            this.Text = "FormCreateMember";
+            this.Text = "Create Member";
             this.Load += new System.EventHandler(this.FormCreateMemberLoad);
             this.grpMember.ResumeLayout(false);
             this.grpMember.PerformLayout();

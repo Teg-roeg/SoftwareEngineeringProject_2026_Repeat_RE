@@ -235,7 +235,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtInstructorID);
             this.Name = "FormRegisterInstructor";
-            this.Text = "FormRegisterInstructor";
+            this.Text = "Register Instructor";
             this.Load += new System.EventHandler(this.FormRegisterInstructor_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
