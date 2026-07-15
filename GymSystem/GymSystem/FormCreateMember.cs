@@ -50,7 +50,35 @@ namespace GymSystem
                 return;
             }
 
+            if (txtEmail.Text == "")
+            {
+                MessageBox.Show("Email must be entered", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtEmail.Focus();
+                return;
+            }
 
+            if (txtPhone.Text == "")
+            {
+                MessageBox.Show("Phone must be entered", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtPhone.Focus();
+                return;
+            }
+
+            Member aMember = new Member( Convert.ToInt32(txtMemberID.Text), txtFirstName.Text, txtLastName.Text, txtEmail.Text, txtPhone.Text, "ACTIVE" );
+
+            aMember.AddMember();
+
+            MessageBox.Show("Member " + txtMemberID.Text + " created successfully", "Success",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            txtMemberID.Text = Member.GetNextMemberID().ToString("0000");
+            txtFirstName.Clear();
+            txtLastName.Clear();
+            txtEmail.Clear();
+            txtPhone.Clear();
+            txtFirstName.Focus();
         }
     }
 }
