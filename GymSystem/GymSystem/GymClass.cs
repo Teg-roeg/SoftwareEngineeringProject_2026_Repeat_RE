@@ -112,29 +112,6 @@ namespace GymSystem
             Database.ExecuteNonQuery(sqlQuery);
         }
 
-        public void UpdateClass()
-        {
-            if (InstructorHasClass())
-            {
-                throw new InvalidOperationException("This instructor is already assigned to another class at this date and time.");
-            }
-
-            string sqlQuery = "UPDATE Classes SET " +
-                              "ClassID = " + ClassID + "," +
-                              "ClassName = '" + ClassName + "'," +
-                              "TypeCode = '" + TypeCode + "'," +
-                              "InstructorID = " + InstructorID + "," +
-                              "ClassDate = TO_DATE('" + ClassDate.ToString("yyyy-MM-dd") + "', 'YYYY-MM-DD')," +
-                              "ClassTime = '" + ClassTime + "'," +
-                              "Price = " + Price + "," +
-                              "RoomID = " + RoomID + "," +
-                              "Capacity = " + Capacity + "," +
-                              "Status = '" + Status + "' " +
-                              "WHERE ClassID = " + ClassID;
-
-            Database.ExecuteNonQuery(sqlQuery);
-        }
-
         public bool InstructorHasClass()
         {
             string sqlQuery = "SELECT COUNT(*) FROM Classes " +
