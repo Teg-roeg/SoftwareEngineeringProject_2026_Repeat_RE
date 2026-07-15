@@ -78,19 +78,6 @@ namespace GymSystem
             Database.ExecuteNonQuery(sqlQuery);
         }
 
-        public void UpdateMember()
-        {
-            string sqlQuery = "UPDATE Members SET " +
-                              "MemberID = " + MemberID + "," +
-                              "FirstName = '" + FirstName + "'," +
-                              "LastName = '" + LastName + "'," +
-                              "Email = '" + Email + "'," +
-                              "Phone = '" + Phone + "'," +
-                              "Status = '" + Status + "' " +
-                              "WHERE MemberID = " + MemberID;
-
-            Database.ExecuteNonQuery(sqlQuery);
-        }
 
         public void WithdrawMember()
         {
