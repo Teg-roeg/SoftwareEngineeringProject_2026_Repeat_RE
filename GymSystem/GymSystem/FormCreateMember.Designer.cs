@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtMembId = new System.Windows.Forms.TextBox();
+            this.txtMemberID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.grpMember = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,17 +41,18 @@
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.backToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnCreate = new System.Windows.Forms.Button();
             this.grpMember.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // txtMembId
+            // txtMemberID
             // 
-            this.txtMembId.Location = new System.Drawing.Point(231, 94);
-            this.txtMembId.MinimumSize = new System.Drawing.Size(120, 35);
-            this.txtMembId.Name = "txtMembId";
-            this.txtMembId.Size = new System.Drawing.Size(121, 35);
-            this.txtMembId.TabIndex = 0;
+            this.txtMemberID.Location = new System.Drawing.Point(231, 94);
+            this.txtMemberID.MinimumSize = new System.Drawing.Size(120, 35);
+            this.txtMemberID.Name = "txtMemberID";
+            this.txtMemberID.Size = new System.Drawing.Size(121, 35);
+            this.txtMemberID.TabIndex = 0;
             // 
             // label1
             // 
@@ -67,6 +68,7 @@
             // 
             // grpMember
             // 
+            this.grpMember.Controls.Add(this.btnCreate);
             this.grpMember.Controls.Add(this.label5);
             this.grpMember.Controls.Add(this.txtPhone);
             this.grpMember.Controls.Add(this.label4);
@@ -78,7 +80,7 @@
             this.grpMember.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpMember.Location = new System.Drawing.Point(72, 162);
             this.grpMember.Name = "grpMember";
-            this.grpMember.Size = new System.Drawing.Size(812, 432);
+            this.grpMember.Size = new System.Drawing.Size(812, 465);
             this.grpMember.TabIndex = 2;
             this.grpMember.TabStop = false;
             this.grpMember.Text = "Enter Member Details";
@@ -100,7 +102,7 @@
             this.txtFirstName.Location = new System.Drawing.Point(205, 71);
             this.txtFirstName.MinimumSize = new System.Drawing.Size(120, 35);
             this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(121, 35);
+            this.txtFirstName.Size = new System.Drawing.Size(324, 35);
             this.txtFirstName.TabIndex = 3;
             // 
             // label3
@@ -120,7 +122,7 @@
             this.txtLastName.Location = new System.Drawing.Point(205, 134);
             this.txtLastName.MinimumSize = new System.Drawing.Size(120, 35);
             this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(121, 35);
+            this.txtLastName.Size = new System.Drawing.Size(324, 35);
             this.txtLastName.TabIndex = 5;
             // 
             // label4
@@ -140,7 +142,7 @@
             this.txtEmail.Location = new System.Drawing.Point(205, 197);
             this.txtEmail.MinimumSize = new System.Drawing.Size(120, 35);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(121, 35);
+            this.txtEmail.Size = new System.Drawing.Size(373, 35);
             this.txtEmail.TabIndex = 7;
             // 
             // label5
@@ -160,7 +162,7 @@
             this.txtPhone.Location = new System.Drawing.Point(205, 264);
             this.txtPhone.MinimumSize = new System.Drawing.Size(120, 35);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(121, 35);
+            this.txtPhone.Size = new System.Drawing.Size(295, 35);
             this.txtPhone.TabIndex = 9;
             // 
             // menuStrip1
@@ -171,7 +173,7 @@
             this.backToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(991, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(849, 31);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -181,9 +183,22 @@
             this.backToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.backToolStripMenuItem.Name = "backToolStripMenuItem";
             this.backToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.backToolStripMenuItem.Size = new System.Drawing.Size(64, 29);
+            this.backToolStripMenuItem.Size = new System.Drawing.Size(64, 27);
             this.backToolStripMenuItem.Text = "Back";
             this.backToolStripMenuItem.Click += new System.EventHandler(this.MenuBackClick);
+            // 
+            // btnCreate
+            // 
+            this.btnCreate.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreate.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnCreate.Location = new System.Drawing.Point(418, 392);
+            this.btnCreate.Name = "btnCreate";
+            this.btnCreate.Size = new System.Drawing.Size(351, 50);
+            this.btnCreate.TabIndex = 11;
+            this.btnCreate.Text = "Create Member";
+            this.btnCreate.UseVisualStyleBackColor = false;
+            this.btnCreate.Click += new System.EventHandler(this.ButtonCreateMemberClick);
             // 
             // FormCreateMember
             // 
@@ -192,7 +207,7 @@
             this.ClientSize = new System.Drawing.Size(991, 657);
             this.Controls.Add(this.grpMember);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtMembId);
+            this.Controls.Add(this.txtMemberID);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormCreateMember";
@@ -209,7 +224,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtMembId;
+        private System.Windows.Forms.TextBox txtMemberID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox grpMember;
         private System.Windows.Forms.Label label3;
@@ -222,5 +237,6 @@
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem backToolStripMenuItem;
+        private System.Windows.Forms.Button btnCreate;
     }
 }

@@ -27,9 +27,30 @@ namespace GymSystem
 
         private void FormCreateMemberLoad(object sender, EventArgs e)
         {
-            //txtMemberID.Text = Member.GetNextMemberID().ToString("0000");
+            txtMemberID.Text = Member.GetNextMemberID().ToString("0000");
 
-            //txtFirstName.Focus();
+            txtFirstName.Focus();
+        }
+
+        private void ButtonCreateMemberClick(object sender, EventArgs e)
+        {
+            if (txtFirstName.Text == "")
+            {
+                MessageBox.Show("First name must be entered", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtFirstName.Focus();
+                return;
+            }
+
+            if (txtLastName.Text == "")
+            {
+                MessageBox.Show("Last name must be entered", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtLastName.Focus();
+                return;
+            }
+
+
         }
     }
 }
