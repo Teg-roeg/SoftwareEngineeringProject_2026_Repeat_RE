@@ -70,6 +70,31 @@ namespace GymSystem
             return new Instructor(id, firstName, lastName, email, phone, speciality, status);
         }
 
+        public void AddInstructor()
+        {
+            Debug.WriteLine(this);
+
+            string sqlQuery = "INSERT INTO Instructors VALUES (" + InstructorID + ",'" + FirstName + "','" + LastName + "','" + Email + "','" + Phone + "','" + Speciality + "','" + Status + "')";
+
+            Database.ExecuteNonQuery(sqlQuery);
+        }
+
+
+        public void UpdateInstructor()
+        {
+            string sqlQuery = "UPDATE Instructors SET " +
+                              "InstructorID = " + InstructorID + "," +
+                              "FirstName = '" + FirstName + "'," +
+                              "LastName = '" + LastName + "'," +
+                              "Email = '" + Email + "'," +
+                              "Phone = '" + Phone + "'," +
+                              "Speciality = '" + Speciality + "'," +
+                              "Status = '" + Status + "' " +
+                              "WHERE InstructorID = " + InstructorID;
+
+            Database.ExecuteNonQuery(sqlQuery);
+        }
+
         public void DeRegisterInstructor()
         {
             string sqlQuery = "UPDATE Instructors SET Status = 'DEREGISTERED' " +

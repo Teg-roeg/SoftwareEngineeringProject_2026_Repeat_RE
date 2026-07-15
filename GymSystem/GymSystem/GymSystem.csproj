@@ -170,6 +170,9 @@
     <EmbeddedResource Include="FormCreateMember.resx">
       <DependentUpon>FormCreateMember.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormRegisterInstructor.resx">
+      <DependentUpon>FormRegisterInstructor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
