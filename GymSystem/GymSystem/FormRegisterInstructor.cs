@@ -73,6 +73,14 @@ namespace GymSystem
                 return;
             }
 
+            if (txtSpeciality.Text == "")
+            {
+                MessageBox.Show("Speciality must be entered", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtSpeciality.Focus();
+                return;
+            }
+
             Instructor anInstructor = new Instructor(
                 Convert.ToInt32(txtInstructorID.Text),
                 txtFirstName.Text,
