@@ -35,11 +35,11 @@
             this.editInstructorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deRegisterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.membersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.createMemberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.withToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.classesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bookingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.createMemberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.withToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -85,6 +85,7 @@
             this.registerInstructorToolStripMenuItem.Name = "registerInstructorToolStripMenuItem";
             this.registerInstructorToolStripMenuItem.Size = new System.Drawing.Size(287, 34);
             this.registerInstructorToolStripMenuItem.Text = "Register Instructor";
+            this.registerInstructorToolStripMenuItem.Click += new System.EventHandler(this.MenuRegisterInstructor);
             // 
             // editInstructorToolStripMenuItem
             // 
@@ -107,6 +108,19 @@
             this.membersToolStripMenuItem.Size = new System.Drawing.Size(103, 29);
             this.membersToolStripMenuItem.Text = "Members";
             // 
+            // createMemberToolStripMenuItem
+            // 
+            this.createMemberToolStripMenuItem.Name = "createMemberToolStripMenuItem";
+            this.createMemberToolStripMenuItem.Size = new System.Drawing.Size(295, 34);
+            this.createMemberToolStripMenuItem.Text = "Create Member";
+            this.createMemberToolStripMenuItem.Click += new System.EventHandler(this.MenuCreateMember);
+            // 
+            // withToolStripMenuItem
+            // 
+            this.withToolStripMenuItem.Name = "withToolStripMenuItem";
+            this.withToolStripMenuItem.Size = new System.Drawing.Size(295, 34);
+            this.withToolStripMenuItem.Text = "Withdraw Membership";
+            // 
             // classesToolStripMenuItem
             // 
             this.classesToolStripMenuItem.Name = "classesToolStripMenuItem";
@@ -125,19 +139,6 @@
             this.adminToolStripMenuItem.Size = new System.Drawing.Size(81, 29);
             this.adminToolStripMenuItem.Text = "Admin";
             // 
-            // createMemberToolStripMenuItem
-            // 
-            this.createMemberToolStripMenuItem.Name = "createMemberToolStripMenuItem";
-            this.createMemberToolStripMenuItem.Size = new System.Drawing.Size(295, 34);
-            this.createMemberToolStripMenuItem.Text = "Create Member";
-            this.createMemberToolStripMenuItem.Click += new System.EventHandler(this.MenuCreateMember);
-            // 
-            // withToolStripMenuItem
-            // 
-            this.withToolStripMenuItem.Name = "withToolStripMenuItem";
-            this.withToolStripMenuItem.Size = new System.Drawing.Size(295, 34);
-            this.withToolStripMenuItem.Text = "Withdraw Membership";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -145,7 +146,7 @@
             this.ClientSize = new System.Drawing.Size(1088, 682);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainForm";
             this.Text = "Main Menu";
             this.menuStrip1.ResumeLayout(false);

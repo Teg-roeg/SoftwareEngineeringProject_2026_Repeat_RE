@@ -21,5 +21,12 @@ namespace GymSystem
             FormCreateMember nextForm = new FormCreateMember(this);
             nextForm.Show();
         }
+
+        private void MenuRegisterInstructor(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormRegisterInstructor nextForm = new FormRegisterInstructor(this);
+            nextForm.Show();
+        }
     }
 }
