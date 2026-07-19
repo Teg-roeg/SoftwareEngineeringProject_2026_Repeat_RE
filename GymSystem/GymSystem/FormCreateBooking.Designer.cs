@@ -36,14 +36,17 @@
             this.cboClasses = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.cboMembers = new System.Windows.Forms.ComboBox();
+            this.mnuFormSchedule = new System.Windows.Forms.MenuStrip();
+            this.backToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grpClass.SuspendLayout();
+            this.mnuFormSchedule.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(47, 60);
+            this.label1.Location = new System.Drawing.Point(47, 82);
             this.label1.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.label1.MinimumSize = new System.Drawing.Size(161, 0);
             this.label1.Name = "label1";
@@ -53,7 +56,7 @@
             // 
             // txtBookingID
             // 
-            this.txtBookingID.Location = new System.Drawing.Point(211, 60);
+            this.txtBookingID.Location = new System.Drawing.Point(211, 82);
             this.txtBookingID.MinimumSize = new System.Drawing.Size(120, 35);
             this.txtBookingID.Name = "txtBookingID";
             this.txtBookingID.Size = new System.Drawing.Size(161, 35);
@@ -126,11 +129,35 @@
             this.cboMembers.Size = new System.Drawing.Size(289, 37);
             this.cboMembers.TabIndex = 12;
             // 
+            // mnuFormSchedule
+            // 
+            this.mnuFormSchedule.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.mnuFormSchedule.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.mnuFormSchedule.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.mnuFormSchedule.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.backToolStripMenuItem});
+            this.mnuFormSchedule.Location = new System.Drawing.Point(0, 0);
+            this.mnuFormSchedule.Name = "mnuFormSchedule";
+            this.mnuFormSchedule.Size = new System.Drawing.Size(707, 33);
+            this.mnuFormSchedule.TabIndex = 11;
+            this.mnuFormSchedule.Text = "menuStrip1";
+            // 
+            // backToolStripMenuItem
+            // 
+            this.backToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.backToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.backToolStripMenuItem.Name = "backToolStripMenuItem";
+            this.backToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.backToolStripMenuItem.Size = new System.Drawing.Size(64, 29);
+            this.backToolStripMenuItem.Text = "Back";
+            this.backToolStripMenuItem.Click += new System.EventHandler(this.MenuBackClick);
+            // 
             // FormCreateBooking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(707, 730);
+            this.Controls.Add(this.mnuFormSchedule);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtBookingID);
             this.Controls.Add(this.grpClass);
@@ -138,6 +165,8 @@
             this.Text = "FormCreateBooking";
             this.grpClass.ResumeLayout(false);
             this.grpClass.PerformLayout();
+            this.mnuFormSchedule.ResumeLayout(false);
+            this.mnuFormSchedule.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -153,5 +182,7 @@
         private System.Windows.Forms.ComboBox cboClasses;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cboMembers;
+        private System.Windows.Forms.MenuStrip mnuFormSchedule;
+        private System.Windows.Forms.ToolStripMenuItem backToolStripMenuItem;
     }
 }
