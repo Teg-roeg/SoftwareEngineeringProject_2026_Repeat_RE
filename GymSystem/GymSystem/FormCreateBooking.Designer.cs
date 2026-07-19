@@ -88,6 +88,7 @@
             this.btnCreateBooking.TabIndex = 24;
             this.btnCreateBooking.Text = "Create Booking";
             this.btnCreateBooking.UseVisualStyleBackColor = false;
+            this.btnCreateBooking.Click += new System.EventHandler(this.ButtonCreateBookingClick);
             // 
             // label8
             // 
@@ -163,6 +164,7 @@
             this.Controls.Add(this.grpClass);
             this.Name = "FormCreateBooking";
             this.Text = "FormCreateBooking";
+            this.Load += new System.EventHandler(this.FormCreateBookingLoad);
             this.grpClass.ResumeLayout(false);
             this.grpClass.PerformLayout();
             this.mnuFormSchedule.ResumeLayout(false);
