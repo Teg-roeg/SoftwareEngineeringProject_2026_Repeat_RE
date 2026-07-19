@@ -35,5 +35,12 @@ namespace GymSystem
             FormScheduleClass nextForm = new FormScheduleClass(this);
             nextForm.Show();
         }
+
+        private void MenuCreateBooking(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormCreateBooking nextForm = new FormCreateBooking(this);
+            nextForm.Show();
+        }
     }
 }
