@@ -46,8 +46,7 @@ namespace GymSystem
             for (int i = 0; i < dsInstructors.Tables[0].Rows.Count; i++)
             {
                 cboInstructors.Items.Add(dsInstructors.Tables[0].Rows[i][0] + " - " +
-                                         dsInstructors.Tables[0].Rows[i][1] + " " +
-                                         dsInstructors.Tables[0].Rows[i][2]);
+                                         dsInstructors.Tables[0].Rows[i][1] + " " + dsInstructors.Tables[0].Rows[i][2]);
             }
 
             DataSet dsRooms = Room.GetRooms();
@@ -56,8 +55,7 @@ namespace GymSystem
 
             for (int i = 0; i < dsRooms.Tables[0].Rows.Count; i++)
             {
-                cboRooms.Items.Add(dsRooms.Tables[0].Rows[i][0] + " - " +
-                                   dsRooms.Tables[0].Rows[i][1]);
+                cboRooms.Items.Add(dsRooms.Tables[0].Rows[i][0] + " - " + dsRooms.Tables[0].Rows[i][1]);
             }
 
             txtPrice.Text = "0.00";

@@ -40,6 +40,10 @@
             this.classesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bookingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.scheduleClassToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cancelClassToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.createBookingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cancelBookingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,7 +62,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1088, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(1088, 38);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "mnuStrip";
             // 
@@ -66,7 +70,7 @@
             // 
             this.mnuExit.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.mnuExit.Name = "mnuExit";
-            this.mnuExit.Size = new System.Drawing.Size(55, 29);
+            this.mnuExit.Size = new System.Drawing.Size(64, 34);
             this.mnuExit.Text = "Exit";
             this.mnuExit.Click += new System.EventHandler(this.MenuExitClick);
             // 
@@ -77,26 +81,26 @@
             this.editInstructorToolStripMenuItem,
             this.deRegisterToolStripMenuItem});
             this.instructorToolStripMenuItem.Name = "instructorToolStripMenuItem";
-            this.instructorToolStripMenuItem.Size = new System.Drawing.Size(104, 29);
+            this.instructorToolStripMenuItem.Size = new System.Drawing.Size(120, 34);
             this.instructorToolStripMenuItem.Text = "Instructor";
             // 
             // registerInstructorToolStripMenuItem
             // 
             this.registerInstructorToolStripMenuItem.Name = "registerInstructorToolStripMenuItem";
-            this.registerInstructorToolStripMenuItem.Size = new System.Drawing.Size(287, 34);
+            this.registerInstructorToolStripMenuItem.Size = new System.Drawing.Size(334, 40);
             this.registerInstructorToolStripMenuItem.Text = "Register Instructor";
             this.registerInstructorToolStripMenuItem.Click += new System.EventHandler(this.MenuRegisterInstructor);
             // 
             // editInstructorToolStripMenuItem
             // 
             this.editInstructorToolStripMenuItem.Name = "editInstructorToolStripMenuItem";
-            this.editInstructorToolStripMenuItem.Size = new System.Drawing.Size(287, 34);
+            this.editInstructorToolStripMenuItem.Size = new System.Drawing.Size(334, 40);
             this.editInstructorToolStripMenuItem.Text = "Edit Instructor";
             // 
             // deRegisterToolStripMenuItem
             // 
             this.deRegisterToolStripMenuItem.Name = "deRegisterToolStripMenuItem";
-            this.deRegisterToolStripMenuItem.Size = new System.Drawing.Size(287, 34);
+            this.deRegisterToolStripMenuItem.Size = new System.Drawing.Size(334, 40);
             this.deRegisterToolStripMenuItem.Text = "De-Register Instructor";
             // 
             // membersToolStripMenuItem
@@ -105,39 +109,70 @@
             this.createMemberToolStripMenuItem,
             this.withToolStripMenuItem});
             this.membersToolStripMenuItem.Name = "membersToolStripMenuItem";
-            this.membersToolStripMenuItem.Size = new System.Drawing.Size(103, 29);
+            this.membersToolStripMenuItem.Size = new System.Drawing.Size(118, 34);
             this.membersToolStripMenuItem.Text = "Members";
             // 
             // createMemberToolStripMenuItem
             // 
             this.createMemberToolStripMenuItem.Name = "createMemberToolStripMenuItem";
-            this.createMemberToolStripMenuItem.Size = new System.Drawing.Size(295, 34);
+            this.createMemberToolStripMenuItem.Size = new System.Drawing.Size(342, 40);
             this.createMemberToolStripMenuItem.Text = "Create Member";
             this.createMemberToolStripMenuItem.Click += new System.EventHandler(this.MenuCreateMember);
             // 
             // withToolStripMenuItem
             // 
             this.withToolStripMenuItem.Name = "withToolStripMenuItem";
-            this.withToolStripMenuItem.Size = new System.Drawing.Size(295, 34);
+            this.withToolStripMenuItem.Size = new System.Drawing.Size(342, 40);
             this.withToolStripMenuItem.Text = "Withdraw Membership";
             // 
             // classesToolStripMenuItem
             // 
+            this.classesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.scheduleClassToolStripMenuItem,
+            this.cancelClassToolStripMenuItem});
             this.classesToolStripMenuItem.Name = "classesToolStripMenuItem";
-            this.classesToolStripMenuItem.Size = new System.Drawing.Size(85, 29);
+            this.classesToolStripMenuItem.Size = new System.Drawing.Size(98, 34);
             this.classesToolStripMenuItem.Text = "Classes";
             // 
             // bookingsToolStripMenuItem
             // 
+            this.bookingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.createBookingToolStripMenuItem,
+            this.cancelBookingToolStripMenuItem});
             this.bookingsToolStripMenuItem.Name = "bookingsToolStripMenuItem";
-            this.bookingsToolStripMenuItem.Size = new System.Drawing.Size(102, 29);
+            this.bookingsToolStripMenuItem.Size = new System.Drawing.Size(115, 34);
             this.bookingsToolStripMenuItem.Text = "Bookings";
             // 
             // adminToolStripMenuItem
             // 
             this.adminToolStripMenuItem.Name = "adminToolStripMenuItem";
-            this.adminToolStripMenuItem.Size = new System.Drawing.Size(81, 29);
+            this.adminToolStripMenuItem.Size = new System.Drawing.Size(92, 34);
             this.adminToolStripMenuItem.Text = "Admin";
+            // 
+            // scheduleClassToolStripMenuItem
+            // 
+            this.scheduleClassToolStripMenuItem.Name = "scheduleClassToolStripMenuItem";
+            this.scheduleClassToolStripMenuItem.Size = new System.Drawing.Size(315, 40);
+            this.scheduleClassToolStripMenuItem.Text = "Schedule Class";
+            this.scheduleClassToolStripMenuItem.Click += new System.EventHandler(this.MenuScheduleClass);
+            // 
+            // cancelClassToolStripMenuItem
+            // 
+            this.cancelClassToolStripMenuItem.Name = "cancelClassToolStripMenuItem";
+            this.cancelClassToolStripMenuItem.Size = new System.Drawing.Size(315, 40);
+            this.cancelClassToolStripMenuItem.Text = "Cancel Class";
+            // 
+            // createBookingToolStripMenuItem
+            // 
+            this.createBookingToolStripMenuItem.Name = "createBookingToolStripMenuItem";
+            this.createBookingToolStripMenuItem.Size = new System.Drawing.Size(315, 40);
+            this.createBookingToolStripMenuItem.Text = "Create Booking";
+            // 
+            // cancelBookingToolStripMenuItem
+            // 
+            this.cancelBookingToolStripMenuItem.Name = "cancelBookingToolStripMenuItem";
+            this.cancelBookingToolStripMenuItem.Size = new System.Drawing.Size(315, 40);
+            this.cancelBookingToolStripMenuItem.Text = "Cancel Booking";
             // 
             // MainForm
             // 
@@ -170,5 +205,9 @@
         private System.Windows.Forms.ToolStripMenuItem adminToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem createMemberToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem withToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem scheduleClassToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cancelClassToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem createBookingToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cancelBookingToolStripMenuItem;
     }
 }
