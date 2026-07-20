@@ -11,15 +11,12 @@ namespace GymSystem
 
         private Instructor instructor;
 
-        public FormEditInstructor()
-        {
-            InitializeComponent();
-        }
-
         public FormEditInstructor(MainForm Parent)
         {
             InitializeComponent();
             parent = Parent;
+            grdInstructors.Visible = false;
+            grpInstructor.Visible = false;
         }
 
         private void MenuBackClick(object sender, EventArgs e)
@@ -29,7 +26,7 @@ namespace GymSystem
         }
         private void ButtonSearchClick(object sender, EventArgs e)
         {
-            if (txtSearch.Text.Trim() == "")
+            if (txtSearch.Text == "")
             {
                 MessageBox.Show("Enter an instructor name");
                 txtSearch.Focus();
@@ -64,6 +61,74 @@ namespace GymSystem
             txtSpeciality.Text = instructor.Speciality;
 
             grpInstructor.Visible = true;
+        }
+
+        private void ButtonUpdateClick(object sender, EventArgs e)
+        {
+            if (instructor == null)
+            {
+                MessageBox.Show("Select an instructor from the grid");
+                return;
+            }
+
+            if (txtFirstName.Text == "")
+            {
+                MessageBox.Show("First name must be entered");
+                txtFirstName.Focus();
+                return;
+            }
+
+            if (txtLastName.Text == "")
+            {
+                MessageBox.Show("Last name must be entered");
+                txtLastName.Focus();
+                return;
+            }
+
+            if (txtEmail.Text == "")
+            {
+                MessageBox.Show("Email must be entered");
+                txtEmail.Focus();
+                return;
+            }
+
+            if (txtPhone.Text == "")
+            {
+                MessageBox.Show("Phone must be entered");
+                txtPhone.Focus();
+                return;
+            }
+
+            if (txtSpeciality.Text == "")
+            {
+                MessageBox.Show("Speciality must be entered");
+                txtSpeciality.Focus();
+                return;
+            }
+
+            instructor.FirstName = txtFirstName.Text.Trim();
+            instructor.LastName = txtLastName.Text.Trim();
+            instructor.Email = txtEmail.Text.Trim();
+            instructor.Phone = txtPhone.Text.Trim();
+            instructor.Speciality = txtSpeciality.Text.Trim();
+
+            instructor.UpdateInstructor();
+
+            MessageBox.Show("Instructor Updated","Success!",MessageBoxButtons.OK,MessageBoxIcon.Information);
+
+            grpInstructor.Visible = false;
+            grdInstructors.Visible = false;
+
+            txtSearch.Clear();
+            txtFirstName.Clear();
+            txtLastName.Clear();
+            txtEmail.Clear();
+            txtPhone.Clear();
+            txtSpeciality.Clear();
+
+            instructor = null;
+
+            txtSearch.Focus();
         }
     }
 }

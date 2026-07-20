@@ -83,6 +83,7 @@
             this.btnSearch.TabIndex = 7;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.ButtonSearchClick);
             // 
             // mnuRegisterInstructor
             // 
@@ -116,6 +117,7 @@
             this.grdInstructors.RowTemplate.Height = 28;
             this.grdInstructors.Size = new System.Drawing.Size(1105, 195);
             this.grdInstructors.TabIndex = 9;
+            this.grdInstructors.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridInstructorsCellClick);
             // 
             // grpInstructor
             // 
@@ -171,6 +173,7 @@
             this.btnUpdate.TabIndex = 11;
             this.btnUpdate.Text = "Edit Instructor";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.ButtonUpdateClick);
             // 
             // label5
             // 

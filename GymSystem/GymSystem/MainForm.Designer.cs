@@ -96,6 +96,7 @@
             this.editInstructorToolStripMenuItem.Name = "editInstructorToolStripMenuItem";
             this.editInstructorToolStripMenuItem.Size = new System.Drawing.Size(287, 34);
             this.editInstructorToolStripMenuItem.Text = "Edit Instructor";
+            this.editInstructorToolStripMenuItem.Click += new System.EventHandler(this.MenuEditInstructorClick);
             // 
             // deRegisterToolStripMenuItem
             // 

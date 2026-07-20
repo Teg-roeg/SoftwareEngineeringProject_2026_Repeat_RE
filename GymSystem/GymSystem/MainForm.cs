@@ -42,5 +42,12 @@ namespace GymSystem
             FormCreateBooking nextForm = new FormCreateBooking(this);
             nextForm.Show();
         }
+
+        private void MenuEditInstructorClick(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormEditInstructor nextForm = new FormEditInstructor(this);
+            nextForm.Show();
+        }
     }
 }
