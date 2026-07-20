@@ -57,7 +57,7 @@
             this.backToolStripMenuItem});
             this.mnuRegisterInstructor.Location = new System.Drawing.Point(0, 0);
             this.mnuRegisterInstructor.Name = "mnuRegisterInstructor";
-            this.mnuRegisterInstructor.Size = new System.Drawing.Size(986, 38);
+            this.mnuRegisterInstructor.Size = new System.Drawing.Size(986, 33);
             this.mnuRegisterInstructor.TabIndex = 7;
             this.mnuRegisterInstructor.Text = "menuStrip1";
             // 
@@ -67,7 +67,7 @@
             this.backToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.backToolStripMenuItem.Name = "backToolStripMenuItem";
             this.backToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.backToolStripMenuItem.Size = new System.Drawing.Size(74, 34);
+            this.backToolStripMenuItem.Size = new System.Drawing.Size(64, 29);
             this.backToolStripMenuItem.Text = "Back";
             this.backToolStripMenuItem.Click += new System.EventHandler(this.MenuBackClick);
             // 
@@ -100,7 +100,7 @@
             this.label6.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.label6.MinimumSize = new System.Drawing.Size(161, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(161, 32);
+            this.label6.Size = new System.Drawing.Size(161, 29);
             this.label6.TabIndex = 13;
             this.label6.Text = "Speciality:";
             // 
@@ -109,7 +109,7 @@
             this.txtSpeciality.Location = new System.Drawing.Point(205, 326);
             this.txtSpeciality.MinimumSize = new System.Drawing.Size(120, 35);
             this.txtSpeciality.Name = "txtSpeciality";
-            this.txtSpeciality.Size = new System.Drawing.Size(218, 39);
+            this.txtSpeciality.Size = new System.Drawing.Size(218, 35);
             this.txtSpeciality.TabIndex = 12;
             // 
             // btnCreate
@@ -121,7 +121,7 @@
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(363, 68);
             this.btnCreate.TabIndex = 11;
-            this.btnCreate.Text = "Create Member";
+            this.btnCreate.Text = "Register Instructor";
             this.btnCreate.UseVisualStyleBackColor = false;
             this.btnCreate.Click += new System.EventHandler(this.ButtonRegisterMemberClick);
             // 
@@ -133,7 +133,7 @@
             this.label5.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.label5.MinimumSize = new System.Drawing.Size(161, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(161, 32);
+            this.label5.Size = new System.Drawing.Size(161, 29);
             this.label5.TabIndex = 10;
             this.label5.Text = "Phone:";
             // 
@@ -142,7 +142,7 @@
             this.txtPhone.Location = new System.Drawing.Point(205, 264);
             this.txtPhone.MinimumSize = new System.Drawing.Size(120, 35);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(295, 39);
+            this.txtPhone.Size = new System.Drawing.Size(295, 35);
             this.txtPhone.TabIndex = 9;
             // 
             // label4
@@ -153,7 +153,7 @@
             this.label4.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.label4.MinimumSize = new System.Drawing.Size(161, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(161, 32);
+            this.label4.Size = new System.Drawing.Size(161, 29);
             this.label4.TabIndex = 8;
             this.label4.Text = "Email:";
             // 
@@ -162,7 +162,7 @@
             this.txtEmail.Location = new System.Drawing.Point(205, 197);
             this.txtEmail.MinimumSize = new System.Drawing.Size(120, 35);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(373, 39);
+            this.txtEmail.Size = new System.Drawing.Size(373, 35);
             this.txtEmail.TabIndex = 7;
             // 
             // label3
@@ -173,7 +173,7 @@
             this.label3.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.label3.MinimumSize = new System.Drawing.Size(161, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(161, 32);
+            this.label3.Size = new System.Drawing.Size(161, 29);
             this.label3.TabIndex = 6;
             this.label3.Text = "Last Name:";
             // 
@@ -182,7 +182,7 @@
             this.txtLastName.Location = new System.Drawing.Point(205, 134);
             this.txtLastName.MinimumSize = new System.Drawing.Size(120, 35);
             this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(324, 39);
+            this.txtLastName.Size = new System.Drawing.Size(324, 35);
             this.txtLastName.TabIndex = 5;
             // 
             // label2
@@ -193,7 +193,7 @@
             this.label2.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.label2.MinimumSize = new System.Drawing.Size(161, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(161, 32);
+            this.label2.Size = new System.Drawing.Size(161, 29);
             this.label2.TabIndex = 4;
             this.label2.Text = "First Name:";
             // 
@@ -202,7 +202,7 @@
             this.txtFirstName.Location = new System.Drawing.Point(205, 71);
             this.txtFirstName.MinimumSize = new System.Drawing.Size(120, 35);
             this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(324, 39);
+            this.txtFirstName.Size = new System.Drawing.Size(324, 35);
             this.txtFirstName.TabIndex = 3;
             // 
             // label1
@@ -213,7 +213,7 @@
             this.label1.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.label1.MinimumSize = new System.Drawing.Size(161, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(173, 32);
+            this.label1.Size = new System.Drawing.Size(161, 29);
             this.label1.TabIndex = 5;
             this.label1.Text = "Instructor ID:";
             // 
@@ -222,7 +222,7 @@
             this.txtInstructorID.Location = new System.Drawing.Point(243, 107);
             this.txtInstructorID.MinimumSize = new System.Drawing.Size(120, 35);
             this.txtInstructorID.Name = "txtInstructorID";
-            this.txtInstructorID.Size = new System.Drawing.Size(121, 35);
+            this.txtInstructorID.Size = new System.Drawing.Size(121, 26);
             this.txtInstructorID.TabIndex = 4;
             // 
             // FormRegisterInstructor

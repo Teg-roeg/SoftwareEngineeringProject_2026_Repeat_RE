@@ -62,7 +62,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1088, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(1106, 33);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "mnuStrip";
             // 
@@ -137,14 +137,14 @@
             // scheduleClassToolStripMenuItem
             // 
             this.scheduleClassToolStripMenuItem.Name = "scheduleClassToolStripMenuItem";
-            this.scheduleClassToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.scheduleClassToolStripMenuItem.Size = new System.Drawing.Size(230, 34);
             this.scheduleClassToolStripMenuItem.Text = "Schedule Class";
             this.scheduleClassToolStripMenuItem.Click += new System.EventHandler(this.MenuScheduleClass);
             // 
             // cancelClassToolStripMenuItem
             // 
             this.cancelClassToolStripMenuItem.Name = "cancelClassToolStripMenuItem";
-            this.cancelClassToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.cancelClassToolStripMenuItem.Size = new System.Drawing.Size(230, 34);
             this.cancelClassToolStripMenuItem.Text = "Cancel Class";
             // 
             // bookingsToolStripMenuItem
@@ -159,14 +159,14 @@
             // createBookingToolStripMenuItem
             // 
             this.createBookingToolStripMenuItem.Name = "createBookingToolStripMenuItem";
-            this.createBookingToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.createBookingToolStripMenuItem.Size = new System.Drawing.Size(236, 34);
             this.createBookingToolStripMenuItem.Text = "Create Booking";
             this.createBookingToolStripMenuItem.Click += new System.EventHandler(this.MenuCreateBooking);
             // 
             // cancelBookingToolStripMenuItem
             // 
             this.cancelBookingToolStripMenuItem.Name = "cancelBookingToolStripMenuItem";
-            this.cancelBookingToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.cancelBookingToolStripMenuItem.Size = new System.Drawing.Size(236, 34);
             this.cancelBookingToolStripMenuItem.Text = "Cancel Booking";
             // 
             // adminToolStripMenuItem
@@ -179,7 +179,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1088, 682);
+            this.ClientSize = new System.Drawing.Size(1106, 682);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(2);
