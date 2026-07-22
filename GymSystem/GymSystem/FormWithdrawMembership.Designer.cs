@@ -107,6 +107,7 @@
             this.btnWithdraw.TabIndex = 11;
             this.btnWithdraw.Text = "Withdraw Member";
             this.btnWithdraw.UseVisualStyleBackColor = false;
+            this.btnWithdraw.Click += new System.EventHandler(this.ButtonWithdrawClick);
             // 
             // label5
             // 

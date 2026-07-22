@@ -70,5 +70,37 @@ namespace GymSystem
             grdMembers.Visible = true;
             grpMember.Visible = false;
         }
+
+        private void ButtonWithdrawClick(object sender, EventArgs e)
+        {
+            if (member == null)
+            {
+                MessageBox.Show("Please select a member from the grid");
+                return;
+            }
+
+            DialogResult result = MessageBox.Show("Are you sure you want to withdraw membership for " + member.FirstName + " " + member.LastName + "?","Confirm Withdrawal",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+
+            if (result == DialogResult.No)
+            {
+                return;
+            }
+
+            member.WithdrawMember();
+
+            MessageBox.Show("Membership withdrawn successfully","Success",MessageBoxButtons.OK,MessageBoxIcon.Information);
+
+            grpMember.Visible = false;
+            grdMembers.Visible = false;
+
+            txtSearch.Clear();
+            txtMemberID.Clear();
+            txtFirstName.Clear();
+            txtLastName.Clear();
+            txtEmail.Clear();
+            txtPhone.Clear();
+
+            txtSearch.Focus();
+        }
     }
 }
