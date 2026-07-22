@@ -101,7 +101,7 @@
             this.btnWithdraw.BackColor = System.Drawing.Color.Navy;
             this.btnWithdraw.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnWithdraw.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnWithdraw.Location = new System.Drawing.Point(679, 409);
+            this.btnWithdraw.Location = new System.Drawing.Point(732, 408);
             this.btnWithdraw.Name = "btnWithdraw";
             this.btnWithdraw.Size = new System.Drawing.Size(417, 73);
             this.btnWithdraw.TabIndex = 11;
@@ -232,6 +232,7 @@
             this.btnSearch.TabIndex = 14;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.ButtonSearchClick);
             // 
             // label6
             // 

@@ -42,5 +42,33 @@ namespace GymSystem
 
             grpMember.Visible = true;
         }
+
+        private void ButtonSearchClick(object sender, EventArgs e)
+        {
+            if (txtSearch.Text == "")
+            {
+                MessageBox.Show("Please enter a member name");
+                txtSearch.Focus();
+                return;
+            }
+
+            DataSet ds = Member.FindMembers(txtSearch.Text.Trim());
+
+            grdMembers.DataSource = ds.Tables[0];
+
+            if (ds.Tables[0].Rows.Count == 0)
+            {
+                MessageBox.Show("No Data Found");
+
+                grdMembers.Visible = false;
+                grpMember.Visible = false;
+
+                txtSearch.Focus();
+                return;
+            }
+
+            grdMembers.Visible = true;
+            grpMember.Visible = false;
+        }
     }
 }
