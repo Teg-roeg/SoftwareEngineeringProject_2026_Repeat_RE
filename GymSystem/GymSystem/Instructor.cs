@@ -79,7 +79,6 @@ namespace GymSystem
             Database.ExecuteNonQuery(sqlQuery);
         }
 
-
         public void UpdateInstructor()
         {
             string sqlQuery = "UPDATE Instructors SET " +
