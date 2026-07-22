@@ -219,6 +219,7 @@
             this.grdMembers.RowTemplate.Height = 28;
             this.grdMembers.Size = new System.Drawing.Size(1184, 234);
             this.grdMembers.TabIndex = 15;
+            this.grdMembers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridMembersCellClick);
             // 
             // btnSearch
             // 
