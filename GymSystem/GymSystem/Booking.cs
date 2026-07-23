@@ -36,6 +36,23 @@ namespace GymSystem
 
             return Database.ExecuteMultiRowQuery(sqlQuery);
         }
+        public static Booking GetBookingByID(int id)
+        {
+            string sqlQuery = "SELECT * FROM Bookings WHERE BookingID = " + id;
+
+            OracleDataReader dr = Database.ExecuteSingleRowQuery(sqlQuery);
+
+            dr.Read();
+
+            int memberID = dr.GetInt32(1);
+            int classID = dr.GetInt32(2);
+            DateTime bookingDate = dr.GetDateTime(3);
+            string status = dr.GetString(4);
+
+            dr.Close();
+
+            return new Booking(id, memberID, classID, bookingDate,status);
+        }
 
         public static DataSet GetBooking(int memberID)
         {
@@ -69,7 +86,7 @@ namespace GymSystem
             string sqlQuery = "SELECT COUNT(*) " +
                               "FROM Bookings b " +
                               "JOIN Classes c ON b.ClassID = c.ClassID " +
-                              "WHERE b.MemberID = " + MemberID + " " +
+                              "WHERE b.MemberID = " + MemberID + " " +          
                               "AND b.Status = 'BOOKED' " +
                               "AND c.ClassDate = (SELECT ClassDate FROM Classes WHERE ClassID = " + ClassID + ") " +
                               "AND c.ClassTime = (SELECT ClassTime FROM Classes WHERE ClassID = " + ClassID + ") " +
