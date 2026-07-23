@@ -106,8 +106,9 @@ namespace GymSystem
         {
             string sqlQuery = "SELECT InstructorID, FirstName, LastName, Email, Phone, Speciality, Status " +
                               "FROM Instructors " +
-                              "WHERE FirstName LIKE '%" + name + "%' " +
-                              "OR LastName LIKE '%" + name + "%' " +
+                              "WHERE Status = 'ACTIVE' " +
+                              "AND (FirstName LIKE '%" + name + "%' " +
+                              "OR LastName LIKE '%" + name + "%') " +
                               "ORDER BY LastName, FirstName";
 
             return Database.ExecuteMultiRowQuery(sqlQuery);
