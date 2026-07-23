@@ -149,8 +149,9 @@
             // cancelClassToolStripMenuItem
             // 
             this.cancelClassToolStripMenuItem.Name = "cancelClassToolStripMenuItem";
-            this.cancelClassToolStripMenuItem.Size = new System.Drawing.Size(268, 40);
+            this.cancelClassToolStripMenuItem.Size = new System.Drawing.Size(315, 40);
             this.cancelClassToolStripMenuItem.Text = "Cancel Class";
+            this.cancelClassToolStripMenuItem.Click += new System.EventHandler(this.MenuCancelClassClick);
             // 
             // bookingsToolStripMenuItem
             // 
@@ -171,8 +172,9 @@
             // cancelBookingToolStripMenuItem
             // 
             this.cancelBookingToolStripMenuItem.Name = "cancelBookingToolStripMenuItem";
-            this.cancelBookingToolStripMenuItem.Size = new System.Drawing.Size(274, 40);
+            this.cancelBookingToolStripMenuItem.Size = new System.Drawing.Size(315, 40);
             this.cancelBookingToolStripMenuItem.Text = "Cancel Booking";
+            this.cancelBookingToolStripMenuItem.Click += new System.EventHandler(this.MenuCancelBookingClick);
             // 
             // adminToolStripMenuItem
             // 

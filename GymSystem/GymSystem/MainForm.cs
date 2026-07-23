@@ -63,5 +63,19 @@ namespace GymSystem
             FormWithdrawMembership nextForm = new FormWithdrawMembership(this);
             nextForm.Show();
         }
+
+        private void MenuCancelClassClick(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormCancelClass nextForm = new FormCancelClass(this);
+            nextForm.Show();
+        }
+
+        private void MenuCancelBookingClick(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormCancelBooking nextForm = new FormCancelBooking(this);
+            nextForm.Show();
+        }
     }
 }
