@@ -98,5 +98,11 @@ namespace GymSystem
 
             txtSearch.Focus();
         }
+
+        private void MenuBackClick(object sender, EventArgs e)
+        {
+            this.Close();
+            parent.Visible = true;
+        }
     }
 }

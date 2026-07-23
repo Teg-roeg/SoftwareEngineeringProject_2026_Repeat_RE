@@ -75,6 +75,7 @@
             this.backToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.backToolStripMenuItem.Size = new System.Drawing.Size(74, 34);
             this.backToolStripMenuItem.Text = "Back";
+            this.backToolStripMenuItem.Click += new System.EventHandler(this.MenuBackClick);
             // 
             // grdInstructors
             // 
