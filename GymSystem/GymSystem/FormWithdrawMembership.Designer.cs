@@ -98,7 +98,7 @@
             // 
             // btnWithdraw
             // 
-            this.btnWithdraw.BackColor = System.Drawing.Color.Navy;
+            this.btnWithdraw.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnWithdraw.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnWithdraw.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnWithdraw.Location = new System.Drawing.Point(732, 408);
