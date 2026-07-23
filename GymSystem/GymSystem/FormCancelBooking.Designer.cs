@@ -45,7 +45,7 @@
             this.txtClassID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtMemberID = new System.Windows.Forms.TextBox();
-            this.txtBooking = new System.Windows.Forms.TextBox();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.mnuCreateMember.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdBookings)).BeginInit();
             this.grpBooking.SuspendLayout();
@@ -102,6 +102,7 @@
             this.btnSearch.TabIndex = 26;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.ButtonSearchClick);
             // 
             // label6
             // 
@@ -248,14 +249,14 @@
             this.txtMemberID.Size = new System.Drawing.Size(178, 39);
             this.txtMemberID.TabIndex = 3;
             // 
-            // txtBooking
+            // txtSearch
             // 
-            this.txtBooking.Location = new System.Drawing.Point(323, 66);
-            this.txtBooking.Margin = new System.Windows.Forms.Padding(4);
-            this.txtBooking.MinimumSize = new System.Drawing.Size(146, 35);
-            this.txtBooking.Name = "txtBooking";
-            this.txtBooking.Size = new System.Drawing.Size(323, 35);
-            this.txtBooking.TabIndex = 24;
+            this.txtSearch.Location = new System.Drawing.Point(323, 66);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSearch.MinimumSize = new System.Drawing.Size(146, 35);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(323, 35);
+            this.txtSearch.TabIndex = 24;
             // 
             // FormCancelBooking
             // 
@@ -267,7 +268,7 @@
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.grpBooking);
-            this.Controls.Add(this.txtBooking);
+            this.Controls.Add(this.txtSearch);
             this.Name = "FormCancelBooking";
             this.Text = "Cancel Booking";
             this.mnuCreateMember.ResumeLayout(false);
@@ -299,6 +300,6 @@
         private System.Windows.Forms.TextBox txtClassID;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtMemberID;
-        private System.Windows.Forms.TextBox txtBooking;
+        private System.Windows.Forms.TextBox txtSearch;
     }
 }
