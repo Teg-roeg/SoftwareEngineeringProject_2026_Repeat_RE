@@ -90,6 +90,7 @@
             this.grdBookings.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grdBookings.Size = new System.Drawing.Size(849, 234);
             this.grdBookings.TabIndex = 27;
+            this.grdBookings.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridBookingsCellClick);
             // 
             // btnSearch
             // 
@@ -142,12 +143,13 @@
             this.btnCancel.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.btnCancel.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCancel.Location = new System.Drawing.Point(171, 438);
+            this.btnCancel.Location = new System.Drawing.Point(188, 442);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(471, 80);
             this.btnCancel.TabIndex = 11;
             this.btnCancel.Text = "Cancel Booking";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.ButtonCancelClick);
             // 
             // label5
             // 
@@ -175,7 +177,7 @@
             // 
             // txtStatus
             // 
-            this.txtStatus.Location = new System.Drawing.Point(238, 349);
+            this.txtStatus.Location = new System.Drawing.Point(255, 349);
             this.txtStatus.MinimumSize = new System.Drawing.Size(133, 35);
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.Size = new System.Drawing.Size(229, 39);
@@ -183,7 +185,7 @@
             // 
             // txtBookingID
             // 
-            this.txtBookingID.Location = new System.Drawing.Point(239, 92);
+            this.txtBookingID.Location = new System.Drawing.Point(256, 92);
             this.txtBookingID.MinimumSize = new System.Drawing.Size(133, 35);
             this.txtBookingID.Name = "txtBookingID";
             this.txtBookingID.Size = new System.Drawing.Size(177, 39);
@@ -203,7 +205,7 @@
             // 
             // txtBookingDate
             // 
-            this.txtBookingDate.Location = new System.Drawing.Point(238, 282);
+            this.txtBookingDate.Location = new System.Drawing.Point(255, 282);
             this.txtBookingDate.MinimumSize = new System.Drawing.Size(133, 35);
             this.txtBookingDate.Name = "txtBookingDate";
             this.txtBookingDate.Size = new System.Drawing.Size(447, 39);
@@ -223,7 +225,7 @@
             // 
             // txtClassID
             // 
-            this.txtClassID.Location = new System.Drawing.Point(238, 219);
+            this.txtClassID.Location = new System.Drawing.Point(255, 219);
             this.txtClassID.MinimumSize = new System.Drawing.Size(133, 35);
             this.txtClassID.Name = "txtClassID";
             this.txtClassID.Size = new System.Drawing.Size(178, 39);
@@ -243,7 +245,7 @@
             // 
             // txtMemberID
             // 
-            this.txtMemberID.Location = new System.Drawing.Point(238, 156);
+            this.txtMemberID.Location = new System.Drawing.Point(255, 156);
             this.txtMemberID.MinimumSize = new System.Drawing.Size(133, 35);
             this.txtMemberID.Name = "txtMemberID";
             this.txtMemberID.Size = new System.Drawing.Size(178, 39);

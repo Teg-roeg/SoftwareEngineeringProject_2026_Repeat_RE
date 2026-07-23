@@ -52,5 +52,53 @@ namespace GymSystem
             grdBookings.Visible = true;
             grpBooking.Visible = false;
         }
+
+        private void GridBookingsCellClick(object sender,DataGridViewCellEventArgs e)
+        {
+
+            int bookingID = Convert.ToInt32(grdBookings.Rows[grdBookings.CurrentCell.RowIndex].Cells[0].Value);
+
+            booking = Booking.GetBookingByID(bookingID);
+
+            txtBookingID.Text = booking.BookingID.ToString("0000");
+            txtMemberID.Text = booking.MemberID.ToString("0000");
+            txtClassID.Text = booking.ClassID.ToString("0000");
+            txtBookingDate.Text = booking.BookingDate.ToShortDateString();
+            txtStatus.Text = booking.Status;
+
+            grpBooking.Visible = true;
+        }
+
+        private void ButtonCancelClick(object sender, EventArgs e)
+        {
+            if (booking == null)
+            {
+                MessageBox.Show("Please select a booking from the grid");
+                return;
+            }
+
+            DialogResult result = MessageBox.Show("Are you sure you want to cancel booking " + booking.BookingID.ToString("0000") + "?","Confirm Cancellation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.No)
+            {
+                return;
+            }
+
+            booking.CancelBooking();
+
+            MessageBox.Show("Booking Cancelled", "Success!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            grpBooking.Visible = false;
+            grdBookings.Visible = false;
+
+            txtSearch.Clear();
+            txtBookingID.Clear();
+            txtMemberID.Clear();
+            txtClassID.Clear();
+            txtBookingDate.Clear();
+            txtStatus.Clear();
+
+            txtSearch.Focus();
+        }
     }
 }
