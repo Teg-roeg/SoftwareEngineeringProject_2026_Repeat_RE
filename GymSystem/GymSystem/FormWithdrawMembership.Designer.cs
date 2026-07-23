@@ -211,13 +211,17 @@
             // 
             // grdMembers
             // 
+            this.grdMembers.AllowUserToAddRows = false;
             this.grdMembers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdMembers.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.grdMembers.Location = new System.Drawing.Point(80, 166);
             this.grdMembers.Margin = new System.Windows.Forms.Padding(4);
+            this.grdMembers.MultiSelect = false;
             this.grdMembers.Name = "grdMembers";
+            this.grdMembers.ReadOnly = true;
             this.grdMembers.RowHeadersWidth = 62;
             this.grdMembers.RowTemplate.Height = 28;
+            this.grdMembers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grdMembers.Size = new System.Drawing.Size(1184, 234);
             this.grdMembers.TabIndex = 15;
             this.grdMembers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridMembersCellClick);
