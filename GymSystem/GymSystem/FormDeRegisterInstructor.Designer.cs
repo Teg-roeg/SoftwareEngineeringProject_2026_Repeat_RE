@@ -148,6 +148,7 @@
             this.btnDeRegister.TabIndex = 11;
             this.btnDeRegister.Text = "Deregister Instructor";
             this.btnDeRegister.UseVisualStyleBackColor = false;
+            this.btnDeRegister.Click += new System.EventHandler(this.ButtonDeRegisterClick);
             // 
             // label5
             // 

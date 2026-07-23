@@ -65,5 +65,38 @@ namespace GymSystem
 
             grpInstructor.Visible = true;
         }
+
+        private void ButtonDeRegisterClick(object sender, EventArgs e)
+        {
+            if (instructor == null)
+            {
+                MessageBox.Show("Please select an instructor from the grid");
+                return;
+            }
+
+            DialogResult result = MessageBox.Show("Are you sure you want to deregister " +instructor.FirstName + " " + instructor.LastName + "?", "Confirm De-Registration", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.No)
+            {
+                return;
+            }
+
+            instructor.DeRegisterInstructor();
+
+            MessageBox.Show("Instructor de-registered successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            grpInstructor.Visible = false;
+            grdInstructors.Visible = false;
+
+            txtSearch.Clear();
+            txtInstructorID.Clear();
+            txtFirstName.Clear();
+            txtLastName.Clear();
+            txtEmail.Clear();
+            txtPhone.Clear();
+            txtSpeciality.Clear();
+
+            txtSearch.Focus();
+        }
     }
 }
