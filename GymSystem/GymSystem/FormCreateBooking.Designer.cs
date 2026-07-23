@@ -46,20 +46,21 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(47, 82);
-            this.label1.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.label1.MinimumSize = new System.Drawing.Size(161, 0);
+            this.label1.Location = new System.Drawing.Point(57, 98);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 0, 0);
+            this.label1.MinimumSize = new System.Drawing.Size(197, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(161, 29);
+            this.label1.Size = new System.Drawing.Size(197, 32);
             this.label1.TabIndex = 10;
             this.label1.Text = "Booking ID:";
             // 
             // txtBookingID
             // 
-            this.txtBookingID.Location = new System.Drawing.Point(211, 82);
-            this.txtBookingID.MinimumSize = new System.Drawing.Size(120, 35);
+            this.txtBookingID.Location = new System.Drawing.Point(258, 98);
+            this.txtBookingID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBookingID.MinimumSize = new System.Drawing.Size(146, 35);
             this.txtBookingID.Name = "txtBookingID";
-            this.txtBookingID.Size = new System.Drawing.Size(161, 35);
+            this.txtBookingID.Size = new System.Drawing.Size(196, 29);
             this.txtBookingID.TabIndex = 9;
             // 
             // grpClass
@@ -70,9 +71,11 @@
             this.grpClass.Controls.Add(this.label4);
             this.grpClass.Controls.Add(this.cboMembers);
             this.grpClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpClass.Location = new System.Drawing.Point(52, 135);
+            this.grpClass.Location = new System.Drawing.Point(64, 162);
+            this.grpClass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grpClass.Name = "grpClass";
-            this.grpClass.Size = new System.Drawing.Size(598, 583);
+            this.grpClass.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpClass.Size = new System.Drawing.Size(731, 700);
             this.grpClass.TabIndex = 8;
             this.grpClass.TabStop = false;
             this.grpClass.Text = "Schedule Class";
@@ -82,9 +85,10 @@
             this.btnCreateBooking.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.btnCreateBooking.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreateBooking.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCreateBooking.Location = new System.Drawing.Point(44, 446);
+            this.btnCreateBooking.Location = new System.Drawing.Point(54, 535);
+            this.btnCreateBooking.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCreateBooking.Name = "btnCreateBooking";
-            this.btnCreateBooking.Size = new System.Drawing.Size(457, 77);
+            this.btnCreateBooking.Size = new System.Drawing.Size(559, 92);
             this.btnCreateBooking.TabIndex = 24;
             this.btnCreateBooking.Text = "Create Booking";
             this.btnCreateBooking.UseVisualStyleBackColor = false;
@@ -94,40 +98,42 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(34, 170);
-            this.label8.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.label8.MinimumSize = new System.Drawing.Size(161, 0);
+            this.label8.Location = new System.Drawing.Point(42, 204);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 0, 0);
+            this.label8.MinimumSize = new System.Drawing.Size(197, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(161, 29);
+            this.label8.Size = new System.Drawing.Size(197, 32);
             this.label8.TabIndex = 21;
             this.label8.Text = "Classes:";
             // 
             // cboClasses
             // 
             this.cboClasses.FormattingEnabled = true;
-            this.cboClasses.Location = new System.Drawing.Point(212, 167);
+            this.cboClasses.Location = new System.Drawing.Point(259, 200);
+            this.cboClasses.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cboClasses.Name = "cboClasses";
-            this.cboClasses.Size = new System.Drawing.Size(289, 37);
+            this.cboClasses.Size = new System.Drawing.Size(352, 40);
             this.cboClasses.TabIndex = 20;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(34, 84);
-            this.label4.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.label4.MinimumSize = new System.Drawing.Size(161, 0);
+            this.label4.Location = new System.Drawing.Point(42, 101);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 0, 0);
+            this.label4.MinimumSize = new System.Drawing.Size(197, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(161, 29);
+            this.label4.Size = new System.Drawing.Size(197, 32);
             this.label4.TabIndex = 13;
             this.label4.Text = "Members:";
             // 
             // cboMembers
             // 
             this.cboMembers.FormattingEnabled = true;
-            this.cboMembers.Location = new System.Drawing.Point(212, 81);
+            this.cboMembers.Location = new System.Drawing.Point(259, 97);
+            this.cboMembers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cboMembers.Name = "cboMembers";
-            this.cboMembers.Size = new System.Drawing.Size(289, 37);
+            this.cboMembers.Size = new System.Drawing.Size(352, 40);
             this.cboMembers.TabIndex = 12;
             // 
             // mnuFormSchedule
@@ -139,7 +145,8 @@
             this.backToolStripMenuItem});
             this.mnuFormSchedule.Location = new System.Drawing.Point(0, 0);
             this.mnuFormSchedule.Name = "mnuFormSchedule";
-            this.mnuFormSchedule.Size = new System.Drawing.Size(707, 33);
+            this.mnuFormSchedule.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
+            this.mnuFormSchedule.Size = new System.Drawing.Size(864, 42);
             this.mnuFormSchedule.TabIndex = 11;
             this.mnuFormSchedule.Text = "menuStrip1";
             // 
@@ -149,21 +156,22 @@
             this.backToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.backToolStripMenuItem.Name = "backToolStripMenuItem";
             this.backToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.backToolStripMenuItem.Size = new System.Drawing.Size(64, 29);
+            this.backToolStripMenuItem.Size = new System.Drawing.Size(74, 38);
             this.backToolStripMenuItem.Text = "Back";
             this.backToolStripMenuItem.Click += new System.EventHandler(this.MenuBackClick);
             // 
             // FormCreateBooking
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(707, 730);
+            this.ClientSize = new System.Drawing.Size(864, 876);
             this.Controls.Add(this.mnuFormSchedule);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtBookingID);
             this.Controls.Add(this.grpClass);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormCreateBooking";
-            this.Text = "FormCreateBooking";
+            this.Text = "Create Booking";
             this.Load += new System.EventHandler(this.FormCreateBookingLoad);
             this.grpClass.ResumeLayout(false);
             this.grpClass.PerformLayout();

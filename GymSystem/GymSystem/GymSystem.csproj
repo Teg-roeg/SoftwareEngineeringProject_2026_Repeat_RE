@@ -170,6 +170,9 @@
     <EmbeddedResource Include="FormCancelBooking.resx">
       <DependentUpon>FormCancelBooking.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormCancelClass.resx">
+      <DependentUpon>FormCancelClass.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormCreateBooking.resx">
       <DependentUpon>FormCreateBooking.cs</DependentUpon>
     </EmbeddedResource>

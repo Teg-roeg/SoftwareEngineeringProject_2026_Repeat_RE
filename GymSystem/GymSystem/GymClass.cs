@@ -144,7 +144,8 @@ namespace GymSystem
         {
             string sqlQuery = "SELECT ClassID, ClassName, TypeCode, ClassDate, ClassTime, Price, Status " +
                               "FROM Classes " +
-                              "WHERE ClassName LIKE '%" + name + "%' " +
+                              "WHERE Status = 'SCHEDULED' " +
+                              "AND ClassName LIKE '%" + name + "%' " +
                               "ORDER BY ClassDate, ClassTime";
 
             return Database.ExecuteMultiRowQuery(sqlQuery);

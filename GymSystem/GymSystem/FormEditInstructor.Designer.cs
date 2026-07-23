@@ -305,7 +305,7 @@
             this.Controls.Add(this.txtSearch);
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormEditInstructor";
-            this.Text = "FormEditInstructor";
+            this.Text = "Edit Instructor";
             this.mnuRegisterInstructor.ResumeLayout(false);
             this.mnuRegisterInstructor.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdInstructors)).EndInit();

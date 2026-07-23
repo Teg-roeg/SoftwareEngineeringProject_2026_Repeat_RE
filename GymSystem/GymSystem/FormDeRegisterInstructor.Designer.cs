@@ -117,7 +117,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(244, 32);
             this.label6.TabIndex = 19;
-            this.label6.Text = "Search Member:";
+            this.label6.Text = "Search Instructor:";
             // 
             // grpInstructor
             // 
@@ -140,7 +140,7 @@
             this.grpInstructor.Size = new System.Drawing.Size(1184, 573);
             this.grpInstructor.TabIndex = 16;
             this.grpInstructor.TabStop = false;
-            this.grpInstructor.Text = "Enter Member Details";
+            this.grpInstructor.Text = "Enter Instructor Details";
             // 
             // btnDeRegister
             // 
@@ -296,7 +296,7 @@
             this.Controls.Add(this.grpInstructor);
             this.Controls.Add(this.txtSearch);
             this.Name = "FormDeRegisterInstructor";
-            this.Text = "FormDeRegisterInstructor";
+            this.Text = "DeRegister Instructor";
             this.mnuCreateMember.ResumeLayout(false);
             this.mnuCreateMember.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdInstructors)).EndInit();

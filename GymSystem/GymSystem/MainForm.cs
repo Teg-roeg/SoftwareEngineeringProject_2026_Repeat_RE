@@ -49,5 +49,19 @@ namespace GymSystem
             FormEditInstructor nextForm = new FormEditInstructor(this);
             nextForm.Show();
         }
+
+        private void MenuDeRegisterInstructorClick(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormDeRegisterInstructor nextForm = new FormDeRegisterInstructor(this);
+            nextForm.Show();
+        }
+
+        private void MenuWithdrawMembershipClick(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormWithdrawMembership nextForm = new FormWithdrawMembership(this);
+            nextForm.Show();
+        }
     }
 }

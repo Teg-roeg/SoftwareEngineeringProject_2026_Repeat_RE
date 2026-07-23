@@ -272,7 +272,7 @@
             this.Controls.Add(this.grpMember);
             this.Controls.Add(this.txtSearch);
             this.Name = "FormWithdrawMembership";
-            this.Text = "FormWithdrawMembership";
+            this.Text = "Withdraw Membership";
             this.mnuCreateMember.ResumeLayout(false);
             this.mnuCreateMember.PerformLayout();
             this.grpMember.ResumeLayout(false);
