@@ -147,9 +147,9 @@
             this.btnDeRegister.BackColor = System.Drawing.Color.Chocolate;
             this.btnDeRegister.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeRegister.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnDeRegister.Location = new System.Drawing.Point(736, 479);
+            this.btnDeRegister.Location = new System.Drawing.Point(682, 472);
             this.btnDeRegister.Name = "btnDeRegister";
-            this.btnDeRegister.Size = new System.Drawing.Size(417, 73);
+            this.btnDeRegister.Size = new System.Drawing.Size(471, 80);
             this.btnDeRegister.TabIndex = 11;
             this.btnDeRegister.Text = "Deregister Instructor";
             this.btnDeRegister.UseVisualStyleBackColor = false;
